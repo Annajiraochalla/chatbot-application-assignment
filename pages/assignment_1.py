@@ -19,16 +19,16 @@ import re
 from sklearn.metrics.pairwise import cosine_similarity
 
 # load question-answer dataset 
-df = pd.read_csv("data/Question_Answer_Dataset_v1.2_S10.csv")
+df = pd.read_csv("/workspaces/chatbot-application-assignnment/data/Question_Answer_Dataset_v1.2_S10.csv")
 
 # load question and answer vectors generated from pre-trained word2vec model
-vector = np.load("/data/advanced-vector.npz")
+vector = np.load("/workspaces/chatbot-application-assignnment/data/advanced-vector.npz")
 ques_vec = vector['x']
 ans_vec = vector['y']
 
 # load the trained word2vec model 
 # Hint: You should use the word2vec model pre-trained with both question and answer sets.
-trained_w2v = gensim.models.Word2Vec.load("data/w2v-advanced.model")
+trained_w2v = gensim.models.Word2Vec.load("/workspaces/chatbot-application-assignnment/data/w2v-advanced.model")
 
 # App title
 st.set_page_config(page_title="Word2vec Question and Answer Chatbot")

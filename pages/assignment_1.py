@@ -31,13 +31,13 @@ ans_vec = vector['y']
 trained_w2v = gensim.models.Word2Vec.load("data/w2v-advanced.model")
 
 # App title
-st.set_page_config(page_title="Word2vec Question and Answer Chatbot - SSIE 519 - Chatbot Assignment - Annajirao Challa")
+st.set_page_config(page_title="Word2vec Question and Answer Chatbot")
 
 # Add header image 
 st.image("data/header-chat-box.png")
 
 # chat title 
-st.title("Word2vec Question and Answer Chatbot")
+st.title("Word2vec Question and Answer Chatbot - SSIE 519 - Chatbot Assignment - Annajirao Challa")
 
 # Store generated responses
 if "messages" not in st.session_state.keys():
